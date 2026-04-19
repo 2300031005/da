@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { Moon, Sun } from 'lucide-react'
-import IconPlaceholder from './IconPlaceholder'
+import { Menu, Moon, Sun } from 'lucide-react'
 import logoImage from '../../img/logo.png'
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
@@ -66,7 +65,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               </a>
               <a
                 href="#signup"
-                className="px-4 py-2 text-sm font-medium text-white bg-[#3b3b6d] hover:bg-[#2d2d5a] rounded-lg transition hover:scale-105"
+                className="px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-dark rounded-lg transition hover:scale-105"
               >
                 Sign Up
               </a>
@@ -78,11 +77,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               className="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? (
-                <IconPlaceholder className="w-6 h-6 text-slate-600 dark:text-slate-400" />
-              ) : (
-                <IconPlaceholder className="w-6 h-6 text-slate-600 dark:text-slate-400" />
-              )}
+              <Menu className="w-6 h-6 text-slate-600 dark:text-slate-400" />
             </button>
           </div>
         </div>
@@ -110,7 +105,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                 </a>
                 <a
                   href="#signup"
-                  className="w-full text-center px-4 py-2 text-sm font-medium text-white bg-[#3b3b6d] hover:bg-[#2d2d5a] rounded-lg transition"
+                  className="w-full text-center px-4 py-2 text-sm font-medium text-white bg-accent hover:bg-accent-dark rounded-lg transition"
                 >
                   Sign Up
                 </a>

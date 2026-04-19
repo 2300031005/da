@@ -1,19 +1,23 @@
 import { Star } from 'lucide-react'
+import people1 from '../../img/people1.jpg'
+import people2 from '../../img/people2.jpg'
+import people3 from '../../img/people3.jpg'
 
 export default function Testimonials() {
+  const peopleImages = [people1, people2, people3]
   const testimonials = [
     {
-      name: 'Aexeusi Shaw',
+      name: 'Yamini Gupta',
       text: 'Lorem ipsum dolor sit ae omet, consectetot oniaiarm adipiscing elit, snunm ctuamod nosillum asparíi cocnaidut.',
       rating: 5,
     },
     {
-      name: 'Naxe Slolloan',
+      name: 'Raj Kumar',
       text: 'Lorem ipsum dolor sit ae omet, consectetut clinenum elit, suthran outam urcikeot dolors me naretoree cocuatat.',
       rating: 5,
     },
     {
-      name: 'Jush Shuraax',
+      name: 'Abhishek Singh',
       text: 'Lorem ipsum dolor sit ae omet, consectetar adipiscing elit, sed rfd nonunantum non monxm qrc antgurrn nexxtot.',
       rating: 5,
     },
@@ -32,14 +36,15 @@ export default function Testimonials() {
             {carouselItems.map((testimonial, index) => (
             <div
               key={index}
-              className="w-[280px] sm:w-[320px] md:w-[360px] shrink-0 bg-white dark:bg-slate-800 rounded-xl border border-slate-200/90 dark:border-slate-700 p-6 shadow-sm hover:shadow-lg transition"
+              className="w-70 sm:w-80 md:w-90 shrink-0 bg-white dark:bg-slate-800 rounded-xl border border-slate-200/90 dark:border-slate-700 p-6 shadow-sm hover:shadow-lg transition"
             >
               {/* User Info */}
               <div className="flex items-center gap-3 mb-4">
-                {/* Avatar Placeholder */}
-                <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-slate-700 border-2 border-dashed border-gray-300 dark:border-slate-600 flex items-center justify-center text-xs font-medium text-gray-400 dark:text-slate-400">
-                  User
-                </div>
+                <img
+                  src={peopleImages[index % peopleImages.length]}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <span className="font-medium text-slate-900 dark:text-white">
                   {testimonial.name}
                 </span>
