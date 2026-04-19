@@ -54,21 +54,21 @@ export default function HowItWorks() {
           How It Works
         </h2>
 
-        {/* Top Illustrations */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-10">
-          {[1, 2, 3].map((num) => (
-            <div
-              key={num}
-              className="aspect-[4/5] w-full overflow-hidden rounded-xl"
-            >
-              <img
-                src={topIllustrations[num]}
-                alt={`Step ${num} illustration`}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
+{/* Top Illustrations */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-5">
+  {[1, 2, 3].map((num) => (
+    <div
+      key={num}
+      className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-white"
+    >
+      <img
+        src={topIllustrations[num]}
+        alt={`Step ${num} illustration`}
+        className="absolute inset-0 w-full h-full object-cover object-center scale-[1.49]"
+      />
+    </div>
+  ))}
+</div>
 
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 py-6 mb-10">
