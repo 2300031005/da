@@ -18,3 +18,21 @@ html {
 body {
   font-family: var(--font-sans);
 }
+
+@keyframes testimonials-scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.testimonials-track {
+  animation: testimonials-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-carousel:hover .testimonials-track {
+  animation-play-state: paused;
+}

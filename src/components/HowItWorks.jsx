@@ -1,11 +1,11 @@
-import { CheckCircle, Clock, HeadphonesIcon, CreditCard, ChevronRight } from 'lucide-react'
+import IconPlaceholder from './IconPlaceholder'
 
 export default function HowItWorks() {
   const trustBadges = [
-    { icon: CheckCircle, text: 'Verified Helpers' },
-    { icon: Clock, text: 'Fast Quotes' },
-    { icon: HeadphonesIcon, text: 'Support Team' },
-    { icon: CreditCard, text: 'Secure Payments' },
+    { text: 'Verified Helpers' },
+    { text: 'Fast Quotes' },
+    { text: 'Support Team' },
+    { text: 'Secure Payments' },
   ]
 
   const steps = [
@@ -52,7 +52,7 @@ export default function HowItWorks() {
               key={index}
               className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700"
             >
-              <badge.icon className="w-4 h-4 text-emerald-500" />
+              <IconPlaceholder className="w-4 h-4 text-emerald-500" />
               <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
                 {badge.text}
               </span>
@@ -83,7 +83,7 @@ export default function HowItWorks() {
               {/* Arrow (not on last step) */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-12 right-0 translate-x-1/2">
-                  <ChevronRight className="w-6 h-6 text-slate-300 dark:text-slate-600" />
+                  <IconPlaceholder className="w-6 h-6 text-slate-300 dark:text-slate-600" />
                 </div>
               )}
 

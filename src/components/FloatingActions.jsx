@@ -1,4 +1,4 @@
-import { MessageCircle, Smartphone } from 'lucide-react'
+import IconPlaceholder from './IconPlaceholder'
 
 export default function FloatingActions() {
   return (
@@ -8,7 +8,7 @@ export default function FloatingActions() {
         className="w-12 h-12 bg-emerald-500 hover:bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg transition hover:scale-105"
         aria-label="WhatsApp Support"
       >
-        <MessageCircle className="w-6 h-6" />
+        <IconPlaceholder className="w-6 h-6" />
       </button>
 
       {/* Mobile CTA Button */}
@@ -16,7 +16,7 @@ export default function FloatingActions() {
         className="px-4 py-2 bg-[#3b3b6d] hover:bg-[#2d2d5a] rounded-full flex items-center gap-2 text-white text-sm font-medium shadow-lg transition hover:scale-105"
         aria-label="Mobile CTA"
       >
-        <Smartphone className="w-4 h-4" />
+        <IconPlaceholder className="w-4 h-4" />
         SutAy mobile CTA
       </button>
     </div>

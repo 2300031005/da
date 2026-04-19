@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react'
+import IconPlaceholder from './IconPlaceholder'
 
 export default function WhyDailyAlly() {
   const benefits = [
@@ -31,7 +31,7 @@ export default function WhyDailyAlly() {
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+                    <IconPlaceholder className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <span className="text-base text-slate-700 dark:text-slate-300">
                     {benefit}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Menu, X, Sun, Moon, Shield } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
+import IconPlaceholder from './IconPlaceholder'
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,7 +20,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
-              <Shield className="w-5 h-5 text-white" />
+              <IconPlaceholder className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-slate-900 dark:text-white">DailyAlly</span>
           </div>
@@ -75,9 +76,9 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-slate-600 dark:text-slate-400" />
+                <IconPlaceholder className="w-6 h-6 text-slate-600 dark:text-slate-400" />
               ) : (
-                <Menu className="w-6 h-6 text-slate-600 dark:text-slate-400" />
+                <IconPlaceholder className="w-6 h-6 text-slate-600 dark:text-slate-400" />
               )}
             </button>
           </div>
