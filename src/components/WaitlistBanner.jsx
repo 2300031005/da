@@ -1,6 +1,6 @@
 export default function WaitlistBanner() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:pt-24 md:pb-10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Only this should have color */}
