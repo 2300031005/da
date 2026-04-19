@@ -56,15 +56,36 @@ export default function HowItWorks() {
 
 {/* Top Illustrations */}
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mb-5">
-  {[1, 2, 3].map((num) => (
+  {[
+    {
+      src: topIllustrations[1],
+      scale: "scale-[1.29]",
+      position: "-translate-x-1.5 translate-y-2",
+    },
+    {
+      src: topIllustrations[2],
+      scale: "scale-[1.3]",
+      position: "translate-x-6.5 translate-y-2.5",
+    },
+    {
+      src: topIllustrations[3],
+      scale: "scale-[1.25]",
+      position: "translate-x-0.5 translate-y-1.5",
+    },
+  ].map((item, index) => (
     <div
-      key={num}
+      key={index}
       className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-white"
     >
       <img
-        src={topIllustrations[num]}
-        alt={`Step ${num} illustration`}
-        className="absolute inset-0 w-full h-full object-cover object-center scale-[1.49]"
+        src={item.src}
+        alt={`Step ${index + 1}`}
+        className={`
+          absolute inset-0 w-full h-full 
+          object-cover object-center
+          ${item.scale}
+          ${item.position}
+        `}
       />
     </div>
   ))}
