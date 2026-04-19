@@ -28,7 +28,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faqs" className="py-16 md:pt-10 md:pb-24 bg-white dark:bg-slate-950">
+    <section id="faqs" className="scroll-mt-24 py-16 md:pt-10 md:pb-24 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-10xl">
           <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-10">
