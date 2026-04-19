@@ -1,4 +1,4 @@
-import heroImage from '../../img/hero.jpeg'
+import heroImage from '../../img/hero1.png'
 import shieldIcon from '../../img/shield-icon.png'
 import timerIcon from '../../img/timer-icon.png'
 import { Search, MapPin } from 'lucide-react'
