@@ -22,7 +22,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="px-6 py-3 text-base font-medium text-white bg-emerald-500 hover:bg-emerald-600 rounded-lg transition hover:scale-105">
+              <button className="px-4 py-2 text-sm font-medium text-white bg-[#3b3b6d] hover:bg-[#2d2d5a] rounded-lg transition hover:scale-105">
                 Post a Task
               </button>
               <button className="px-6 py-3 text-base font-medium text-emerald-600 dark:text-emerald-400 border-2 border-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950 rounded-lg transition hover:scale-105">
