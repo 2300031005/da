@@ -1,10 +1,13 @@
-import IconPlaceholder from './IconPlaceholder'
+import heroImage from '../../img/hero.jpeg'
+import shieldIcon from '../../img/shield-icon.jpeg'
+import timerIcon from '../../img/timer-icon.jpeg'
+import { Search, MapPin } from 'lucide-react'
 
 export default function Hero() {
   const trustBadges = [
-    { text: 'Verified Helpers' },
-    { text: 'Fast Quotes' },
-    { text: 'Secure Payments' },
+    { text: 'Verified Helpers', icon: shieldIcon },
+    { text: 'Fast Quotes', icon: timerIcon },
+    { text: 'Secure Payments', icon: shieldIcon },
   ]
 
   return (
@@ -36,37 +39,45 @@ export default function Hero() {
             </div>
 
             {/* Trust Badges */}
-            <div className="mt-6 mb-10 flex flex-wrap gap-6">
-              {trustBadges.map((badge, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <IconPlaceholder className="w-5 h-5 text-emerald-500" />
-                  <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
-                    {badge.text}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <div className="mt-6 mb-10 flex flex-wrap gap-8">
+  {trustBadges.map((badge, index) => (
+    <div key={index} className="relative flex items-center gap-2.5">
+      
+      {/* Icon wrapper */}
+      <div className="relative w-6 h-6 flex items-center justify-center">
+        
+        {/* Image (scaled + behind) */}
+        <img
+          src={badge.icon}
+          alt=""
+          className="absolute inset-0 w-full h-full object-contain scale-[2.5] z-0"
+        />
+
+        {/* Invisible spacer to maintain layout */}
+        <div className="w-full h-full" />
+
+      </div>
+
+      {/* Text (above image) */}
+      <span className="relative z-10 text-sm font-medium text-slate-600 dark:text-slate-400">
+        {badge.text}
+      </span>
+
+    </div>
+  ))}
+</div>
           </div>
 
           {/* Right Content */}
           <div className="order-1 lg:order-2 relative">
-            
-            {/* Floating Icons */}
-            <div className="absolute -top-4 left-4 lg:left-0 w-12 h-12 rounded-full bg-blue-100 dark:bg-slate-800 border-2 border-dashed border-blue-300 dark:border-slate-600 flex items-center justify-center text-xs font-medium text-blue-400 dark:text-slate-400 z-10">
-              Icon
-            </div>
-
-            <div className="absolute top-8 right-4 lg:right-0 w-12 h-12 rounded-full bg-orange-100 dark:bg-slate-800 border-2 border-dashed border-orange-300 dark:border-slate-600 flex items-center justify-center text-xs font-medium text-orange-400 dark:text-slate-400 z-10">
-              Icon
-            </div>
-
-            <div className="absolute bottom-16 -left-2 lg:-left-6 w-12 h-12 rounded-full bg-purple-100 dark:bg-slate-800 border-2 border-dashed border-purple-300 dark:border-slate-600 flex items-center justify-center text-xs font-medium text-purple-400 dark:text-slate-400 z-10">
-              Icon
-            </div>
 
             {/* Hero Image */}
-            <div className="aspect-square w-full max-w-[500px] mx-auto bg-gray-100 dark:bg-slate-800 border-2 border-dashed border-gray-300 dark:border-slate-600 rounded-xl flex items-center justify-center text-sm font-medium text-gray-400 dark:text-slate-400">
-              Hero Image
+            <div className="aspect-square w-full max-w-[500px] mx-auto overflow-hidden rounded-xl">
+              <img
+                src={heroImage}
+                alt="DailyAlly hero"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -83,7 +94,7 @@ export default function Hero() {
                   What do you need help with?
                 </label>
                 <div className="relative">
-                  <IconPlaceholder className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                   <input
                     type="text"
                     placeholder="Fix leaking tap"
@@ -98,7 +109,7 @@ export default function Hero() {
                   Location
                 </label>
                 <div className="relative">
-                  <IconPlaceholder className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                   <input
                     type="text"
                     placeholder="Alwal, Hyderabad"
