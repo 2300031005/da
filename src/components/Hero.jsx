@@ -1,6 +1,6 @@
 import heroImage from '../../img/hero.jpeg'
-import shieldIcon from '../../img/shield-icon.jpeg'
-import timerIcon from '../../img/timer-icon.jpeg'
+import shieldIcon from '../../img/shield-icon.png'
+import timerIcon from '../../img/timer-icon.png'
 import { Search, MapPin } from 'lucide-react'
 
 export default function Hero() {

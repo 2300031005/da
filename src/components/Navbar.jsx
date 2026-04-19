@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import IconPlaceholder from './IconPlaceholder'
+import logoImage from '../../img/logo.png'
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,9 +20,11 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
-              <IconPlaceholder className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src={logoImage}
+              alt="DailyAlly logo"
+              className="w-8 h-8 rounded-full object-cover"
+            />
             <span className="text-xl font-bold text-slate-900 dark:text-white">DailyAlly</span>
           </div>
 
