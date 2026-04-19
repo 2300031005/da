@@ -1,7 +1,7 @@
 import IconPlaceholder from './IconPlaceholder'
-import paintingPersonImage from '../../img/painting-person.png'
-import cleaningWomanImage from '../../img/cleaning-woman.png'
-import twoManImage from '../../img/two-man.png'
+import paintingPersonImage from '../../img/man-paint.png'
+import cleaningWomanImage from '../../img/woman-clean1.png'
+import twoManImage from '../../img/man-woman.png'
 import womanClickImage from '../../img/woman-click1.png'
 import quoteImage from '../../img/quote.png'
 import chatImage from '../../img/chat.png'
@@ -50,7 +50,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 dark:text-white text-center mb-12">
           How It Works
         </h2>
 
@@ -97,7 +97,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Bottom Section - How It Works Heading */}
-        <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white text-center mb-12">
+        <h2 className="text-4xl md:text-4xl font-semibold text-slate-900 dark:text-white text-center mb-12">
           How It Works
         </h2>
 
