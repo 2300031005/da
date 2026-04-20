@@ -83,7 +83,7 @@ export default function Hero() {
         </div>
 
         {/* Search Bar */}
-        <div className="relative -mt-6 md:-mt-10 z-20 mb-[-100px]">
+        <div className="relative -mt-6 md:-mt-10 z-20 mb-0 md:-mb-25">
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-4 md:p-6 border border-slate-200 dark:border-slate-700">
             
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4">
